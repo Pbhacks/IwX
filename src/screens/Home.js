@@ -1,17 +1,20 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
+import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
 
 const Home = ({ navigation }) => {
-  const handleGetStarted = () => {
+  const handleNext = () => {
     navigation.navigate('Main');
   };
 
   return (
-    <LinearGradient colors={['#002147', '#8A2BE2']} style={styles.container}>
-      <Text style={styles.title}>IwX</Text>
-      <Button title="Get Started" onPress={handleGetStarted} />
-    </LinearGradient>
+    <View style={styles.container}>
+      <ImageBackground source={require('./2.jpg')} style={styles.background} blurRadius={5}>
+        <Text style={styles.title}>IwX</Text>
+        <TouchableOpacity style={styles.arrowButton} onPress={handleNext}>
+          <Text style={styles.arrowText}>→</Text>
+        </TouchableOpacity>
+      </ImageBackground>
+    </View>
   );
 };
 
@@ -22,11 +25,32 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 36,
+    fontSize: 72,
     color: '#ffffff',
+    fontFamily: 'BRADHI', // Use the custom font family
+    fontWeight: 'bold',
     textShadowColor: '#000000',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
+    zIndex: 1,
+    marginBottom: 100,
+  },
+  background: {
+    flex: 1,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  arrowButton: {
+    position: 'absolute',
+    bottom: 50,
+    backgroundColor: 'blue',
+    borderRadius: 50,
+    padding: 20,
+  },
+  arrowText: {
+    fontSize: 24,
+    color: '#ffffff',
   },
 });
 
