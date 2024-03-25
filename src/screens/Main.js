@@ -32,6 +32,10 @@ const Main = ({ navigation }) => {
     Linking.openURL('https://www.google.com/search?q=google+lens');
   };
 
+  const handleSettingsClick = () => {
+    navigation.navigate('Settings');
+  };
+
   return (
     <ImageBackground source={require('./1.jpg')} style={styles.background}>
       <View style={styles.container}>
@@ -68,6 +72,9 @@ const Main = ({ navigation }) => {
             setShowFullText={setShowFullText}
           />
         </View>
+        <TouchableOpacity style={styles.settingsButton} onPress={handleSettingsClick}>
+          <MaterialIcons name="settings" size={30} color="#fff" />
+        </TouchableOpacity>
         <TouchableOpacity style={styles.homeButton} onPress={handleHomeClick}>
           <MaterialIcons name="home" size={30} color="#fff" />
         </TouchableOpacity>
@@ -133,6 +140,14 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   homeButton: {
+    position: 'absolute',
+    bottom: 20,
+    right: 170,
+    backgroundColor: 'rgba(255, 0, 0, 0.7)',
+    borderRadius: 30,
+    padding: 15,
+  },
+  settingsButton: {
     position: 'absolute',
     bottom: 20,
     right: 20,

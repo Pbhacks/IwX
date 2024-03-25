@@ -10,8 +10,8 @@ const Home = ({ navigation }) => {
     <View style={styles.container}>
       <ImageBackground source={require('./2.jpg')} style={styles.background} blurRadius={5}>
         <Text style={styles.title}>IwX</Text>
-        <TouchableOpacity style={styles.arrowButton} onPress={handleNext}>
-          <Text style={styles.arrowText}>→</Text>
+        <TouchableOpacity style={styles.buttonClass} onPress={handleNext}>
+          <Text style={styles.buttonText}>Get Started</Text>
         </TouchableOpacity>
       </ImageBackground>
     </View>
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     zIndex: 1,
-    marginBottom: 100,
+    marginBottom: 50,
   },
   background: {
     flex: 1,
@@ -41,16 +41,24 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  arrowButton: {
-    position: 'absolute',
-    bottom: 50,
-    backgroundColor: 'blue',
-    borderRadius: 50,
-    padding: 20,
+  buttonClass: {
+    width: 140,
+    height: 50,
+    borderWidth: 1,
+    borderColor: '#00ff15',
+    borderRadius: 18,
+    backgroundColor: 'linear-gradient(rgba(141, 21, 182, 1), rgba(229, 68, 233, 1))',
+    boxShadow: '3px 4px 0px 0px #8a2a21',
+    shadowColor: '#810e05',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 80,
   },
-  arrowText: {
-    fontSize: 24,
-    color: '#ffffff',
+  buttonText: {
+    fontSize: 15,
+    fontFamily: 'Arial',
+    color: '#fff',
+    fontWeight: 'bold',
   },
 });
 

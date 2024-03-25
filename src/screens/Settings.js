@@ -1,0 +1,186 @@
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, TextInput, Modal, TouchableWithoutFeedback } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { MaterialIcons } from '@expo/vector-icons';
+import * as Location from 'expo-location';
+
+const Settings = () => {
+  const [darkMode, setDarkMode] = useState(false);
+  const [showNamePopup, setShowNamePopup] = useState(false);
+  const [name, setName] = useState('');
+  const [storedName, setStoredName] = useState('');
+
+  useEffect(() => {
+    async function loadName() {
+      try {
+        const storedName = await AsyncStorage.getItem('name');
+        if (storedName !== null) {
+          setStoredName(storedName);
+        }
+      } catch (error) {
+        console.error('Error loading name:', error.message);
+      }
+    }
+    loadName();
+  }, []);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  const handleNameChange = (text) => {
+    setName(text);
+  };
+
+  const handleNameSubmit = async () => {
+    try {
+      await AsyncStorage.setItem('name', name);
+      setStoredName(name);
+      setShowNamePopup(false);
+    } catch (error) {
+      console.error('Error saving name:', error.message);
+    }
+  };
+
+  const handleLocationClick = async () => {
+    let { status } = await Location.requestForegroundPermissionsAsync();
+    if (status !== 'granted') {
+      console.log('Permission to access location was denied');
+      return;
+    }
+
+    let location = await Location.getCurrentPositionAsync({});
+    console.log('Location:', location.coords);
+  };
+
+  return (
+    <View style={styles.container}>
+      <ImageBackground source={require('./3.jpg')} style={styles.backgroundImage}>
+        {storedName !== '' && (
+          <View style={styles.upperHalf}>
+            <Text style={styles.greetingText}>Hello,</Text>
+            <Text style={styles.usernameText}>{storedName}</Text>
+          </View>
+        )}
+      </ImageBackground>
+      <View style={[styles.lowerHalf, darkMode ? styles.darkMode : null]}>
+        <TouchableOpacity style={styles.settingButton} onPress={() => setShowNamePopup(true)}>
+          <Text style={[styles.settingButtonText, darkMode && styles.darkModeText]}>Name</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.settingButton} onPress={handleLocationClick}>
+          <Text style={[styles.settingButtonText, darkMode && styles.darkModeText]}>Location</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.settingButton, darkMode ? styles.darkModeText : null]} onPress={toggleDarkMode}>
+          <Text style={[styles.settingButtonText, darkMode && styles.darkModeText]}>{darkMode ? 'Light Mode' : 'Dark Mode'}</Text>
+        </TouchableOpacity>
+      </View>
+      <Modal visible={showNamePopup} transparent animationType="fade">
+        <TouchableWithoutFeedback onPress={() => setShowNamePopup(false)}>
+          <View style={styles.modalOverlay}>
+            <View style={styles.modalContent}>
+              <Text style={styles.modalTitle}>Enter Your Name</Text>
+              <TextInput
+                style={styles.input}
+                placeholder="Your Name"
+                value={name}
+                onChangeText={handleNameChange}
+              />
+              <TouchableOpacity style={styles.submitButton} onPress={handleNameSubmit}>
+                <Text style={styles.submitButtonText}>Submit</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </TouchableWithoutFeedback>
+      </Modal>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
+    overflow: 'hidden',
+  },
+  upperHalf: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  lowerHalf: {
+    flex: 1,
+    backgroundColor: '#fff',
+    paddingHorizontal: 20,
+    paddingTop: 20,
+  },
+  greetingText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#fff',
+  },
+  usernameText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#fff',
+  },
+  settingButton: {
+    paddingVertical: 15,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ccc',
+  },
+  settingButtonText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#333',
+  },
+  darkMode: {
+    backgroundColor: '#000',
+  },
+  darkModeText: {
+    color: '#fff',
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalContent: {
+    backgroundColor: 'blue',
+    borderRadius: 10,
+    padding: 20,
+    width: '80%',
+  },
+  modalTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    color: '#fff',
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    padding: 10,
+    marginBottom: 10,
+    color: '#fff',
+  },
+  submitButton: {
+    backgroundColor: 'white',
+    paddingVertical: 10,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  submitButtonText: {
+    color: 'blue',
+    fontWeight: 'bold',
+  },
+});
+
+export default Settings;
