@@ -35,7 +35,7 @@ const AiChat = () => {
       const response = await axios.post('https://api.openai.com/v1/completions', requestData, {
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer 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',
+          'Authorization': '',
         },
       });
 
