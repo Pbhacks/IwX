@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, TextInput, Modal, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, TextInput, Modal, TouchableWithoutFeedback, Linking } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { MaterialIcons } from '@expo/vector-icons';
 import * as Location from 'expo-location';
@@ -53,6 +53,11 @@ const Settings = () => {
     console.log('Location:', location.coords);
   };
 
+  const navigateToCreditScore = () => {
+    // Replace 'https://www.policybazaar.com/credit-score/' with the actual URL for credit score website
+    Linking.openURL('https://creditreport.paisabazaar.com/credit-report/apply?utm_source=google_search&utm_medium=ppc0paisabazaar&utm_term=credit%20score&utm_campaign=LS_Top3Kw_Phrase_13thApr2200Credit_Score&utm_network=g&utm_matchtype=p&utm_device=c&utm_placement=&utm_content=676846002668&utm_Adposition=&utm_location=9302159&utm_Sitelink=&utm_Audience=kwd-10124391&utm_Promotion=&utm_Price=&utm_campaignid=20646528617&gad_source=1&gclid=Cj0KCQjwwYSwBhDcARIsAOyL0fiNcO0qnMlxITkJaycxZuKYCU01XY179c-0CxUuZCh2EOu_qRgPYBQaArlNEALw_wcB');
+  };
+
   return (
     <View style={styles.container}>
       <ImageBackground source={require('./3.jpg')} style={styles.backgroundImage}>
@@ -72,6 +77,9 @@ const Settings = () => {
         </TouchableOpacity>
         <TouchableOpacity style={[styles.settingButton, darkMode ? styles.darkModeText : null]} onPress={toggleDarkMode}>
           <Text style={[styles.settingButtonText, darkMode && styles.darkModeText]}>{darkMode ? 'Light Mode' : 'Dark Mode'}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.settingButton} onPress={navigateToCreditScore}>
+          <Text style={[styles.settingButtonText, darkMode && styles.darkModeText]}>Show Credit Score</Text>
         </TouchableOpacity>
       </View>
       <Modal visible={showNamePopup} transparent animationType="fade">

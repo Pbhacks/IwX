@@ -14,10 +14,10 @@ const Main = ({ navigation }) => {
         navigation.navigate('IncomeTaxAssistant');
         break;
       case 'KnowMore':
-        navigation.navigate('KnowMore');
+        navigation.navigate('Know');
         break;
       case 'AIChatbot':
-        navigation.navigate('AIChatbot');
+        navigation.navigate('ai');
         break;
       default:
         break;

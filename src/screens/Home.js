@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 72,
     color: '#ffffff',
-    fontFamily: 'BRADHI', // Use the custom font family
     fontWeight: 'bold',
     textShadowColor: '#000000',
     textShadowOffset: { width: 2, height: 2 },
@@ -56,7 +55,6 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 15,
-    fontFamily: 'Arial',
     color: '#fff',
     fontWeight: 'bold',
   },
