@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Linking } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
+
+
 const Main = ({ navigation }) => {
   const [showFullText, setShowFullText] = useState(false);
 
@@ -11,7 +13,7 @@ const Main = ({ navigation }) => {
         navigation.navigate('BA');
         break;
       case 'IncomeTaxAssistant':
-        navigation.navigate('IncomeTaxAssistant');
+        navigation.navigate('Itxassist');
         break;
       case 'KnowMore':
         navigation.navigate('Know');
