@@ -14,12 +14,13 @@ import LpSouthk from '../screens/subscreens/Southk/LpSouthk';
 import ChinaLS from '../screens/subscreens/China/ChinaLS';
 import ChinaOv from '../screens/subscreens/China/ChinaOv';
 import Performance from '../screens/Performance';
+
 const Stack = createStackNavigator();
 
 const MainStackNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName="Home" headerMode="none">
-       <Stack.Screen name="Main" component={Main} />
+    <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Main" component={Main} />
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="BA" component={BA} /> 
       <Stack.Screen name="Itxassist" component={Itxassist}/>

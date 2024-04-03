@@ -70,6 +70,7 @@ const GeminiChat = () => {
   };
 
   const clearMessages = () => {
+    Speech.stop(); // Stop speech
     setMessages([]);
     setIsSpeaking(false);
   };
@@ -106,6 +107,9 @@ const GeminiChat = () => {
           style={styles.input}
           placeholderTextColor="#fff"
         />
+        <TouchableOpacity style={styles.sendButton} onPress={sendMessage}>
+          <Text style={styles.sendButtonText}>Send</Text>
+        </TouchableOpacity>
         {showStopIcon && (
           <TouchableOpacity style={styles.stopIcon} onPress={clearMessages}>
             <Entypo name="controller-stop" size={24} color="white" />
@@ -143,6 +147,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginRight: 5,
   },
+  sendButton: {
+    padding: 10,
+    backgroundColor: "#007AFF",
+    borderRadius: 10,
+    height: 50,
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: 5,
+  },
+  sendButtonText: {
+    color: "white",
+    fontWeight: "bold",
+  },
   stopIcon: {
     padding: 10,
     backgroundColor: "#131314",
@@ -151,7 +168,7 @@ const styles = StyleSheet.create({
     width: 50,
     justifyContent: "center",
     alignItems: "center",
-    marginLeft: 3,
+    marginLeft: 5,
   },
 });
 
