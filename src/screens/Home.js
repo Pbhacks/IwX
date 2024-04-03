@@ -8,7 +8,7 @@ const Home = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <ImageBackground source={require('./2.jpg')} style={styles.background} blurRadius={5}>
+      <ImageBackground source={require('./1.jpg')} style={styles.background} blurRadius={5}>
         <Text style={styles.title}>IwX</Text>
         <TouchableOpacity style={styles.buttonClass} onPress={handleNext}>
           <Text style={styles.buttonText}>Get Started</Text>
@@ -40,24 +40,26 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  buttonClass: {
-    width: 140,
-    height: 50,
-    borderWidth: 1,
-    borderColor: '#00ff15',
-    borderRadius: 18,
-    backgroundColor: 'linear-gradient(rgba(141, 21, 182, 1), rgba(229, 68, 233, 1))',
-    boxShadow: '3px 4px 0px 0px #8a2a21',
-    shadowColor: '#810e05',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 80,
-  },
-  buttonText: {
-    fontSize: 15,
-    color: '#fff',
-    fontWeight: 'bold',
-  },
+buttonClass: {
+  width: 160, // Increased width for better visibility
+  height: 60, // Increased height for better touch area
+  borderWidth: 2, // Increased border width for better visibility
+  borderColor: '#00ff15',
+  borderRadius: 25, // Increased border radius for a more rounded, modern look
+  backgroundColor: 'linear-gradient(rgba(141, 21, 182, 1), rgba(229, 68, 233, 1))',
+  boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.1)', // Subtle shadow for a 3D effect
+  shadowColor: '#810e05',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginTop: 80,
+  padding: 10, // Padding for better text alignment
+},
+buttonText: {
+  fontSize: 18, // Increased font size for better readability
+  color: '#fff',
+  fontWeight: 'bold',
+  textTransform: 'uppercase', // Text in uppercase for a more button-like feel
+},
 });
 
 export default Home;

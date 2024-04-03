@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Linking } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
-
-
 const Main = ({ navigation }) => {
   const [showFullText, setShowFullText] = useState(false);
 
@@ -39,7 +37,7 @@ const Main = ({ navigation }) => {
   };
 
   return (
-    <ImageBackground source={require('./1.jpg')} style={styles.background}>
+    <ImageBackground source={require('./tn.jpg')} style={styles.background}>
       <View style={styles.container}>
         <TouchableOpacity style={styles.cameraButton} onPress={handleCameraOpen}>
           <MaterialIcons name="photo-camera" size={30} color="#fff" />
@@ -74,8 +72,8 @@ const Main = ({ navigation }) => {
             setShowFullText={setShowFullText}
           />
         </View>
-        <TouchableOpacity style={styles.settingsButton} onPress={handleSettingsClick}>
-          <MaterialIcons name="settings" size={30} color="#fff" />
+        <TouchableOpacity style={styles.profileButton} onPress={handleSettingsClick}>
+          <MaterialIcons name="person" size={30} color="#fff" />
         </TouchableOpacity>
         <TouchableOpacity style={styles.homeButton} onPress={handleHomeClick}>
           <MaterialIcons name="home" size={30} color="#fff" />
@@ -118,11 +116,10 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   card: {
-    backdropFilter: 'blur(16px) saturate(180%)',
-    WebkitBackdropFilter: 'blur(16px) saturate(180%)',
     backgroundColor: 'rgba(17, 25, 40, 0.75)',
     borderRadius: 12,
-    border: '1px solid rgba(255, 255, 255, 0.125)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.125)',
     marginBottom: 20,
     padding: 20,
   },
@@ -141,18 +138,18 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     padding: 15,
   },
-  homeButton: {
+  profileButton: {
     position: 'absolute',
     bottom: 20,
-    right: 170,
+    right: 20,
     backgroundColor: 'rgba(255, 0, 0, 0.7)',
     borderRadius: 30,
     padding: 15,
   },
-  settingsButton: {
+  homeButton: {
     position: 'absolute',
     bottom: 20,
-    right: 20,
+    right: 170,
     backgroundColor: 'rgba(255, 0, 0, 0.7)',
     borderRadius: 30,
     padding: 15,

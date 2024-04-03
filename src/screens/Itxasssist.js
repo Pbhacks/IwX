@@ -6,7 +6,7 @@ const countries = [
   { name: 'China', image: require('./03.jpg') },
   { name: 'India', image: require('./04.jpg') },
   { name: 'Japan', image: require('./05.jpg') },
-  { name: 'SouthK', image: require('./06.jpg') },
+  { name: 'South Korea', image: require('./06.jpg') },
 ];
 
 const Itxassist = ({ navigation }) => {
@@ -24,7 +24,7 @@ const Itxassist = ({ navigation }) => {
       case 'Japan':
         navigation.navigate('LpJapan');
         break;
-      case 'SouthK':
+      case 'South Korea':
         navigation.navigate('LpSouthk');
         break;
       default:

@@ -13,6 +13,7 @@ import LpJapan from '../screens/subscreens/Japan/LpJapan';
 import LpSouthk from '../screens/subscreens/Southk/LpSouthk';
 import ChinaLS from '../screens/subscreens/China/ChinaLS';
 import ChinaOv from '../screens/subscreens/China/ChinaOv';
+import Performance from '../screens/Performance';
 const Stack = createStackNavigator();
 
 const MainStackNavigator = () => {
@@ -31,6 +32,7 @@ const MainStackNavigator = () => {
       <Stack.Screen name="Settings" component={Settings} />
       <Stack.Screen name="ai" component={ai} />
       <Stack.Screen name="Know" component={Know} />
+      <Stack.Screen name="Performance" component={Performance} />
     </Stack.Navigator>
   );
 };

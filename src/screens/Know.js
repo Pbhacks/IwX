@@ -48,7 +48,8 @@ const KnowMore = () => {
           <View style={styles.teamContainer}>
             <View style={styles.member}>
               <Image source={require('./1.jpg')} style={styles.memberImage} />
-              <Text style={styles.memberName}>John Doe</Text>
+              <Text style={styles.memberName}>Priyant Banerjee</Text>
+              <Text style={styles.memberRole}>Founder & CEO</Text>
               <TouchableOpacity onPress={() => Linking.openURL('https://github.com/pbhacks')}>
       <Icon name="github" style={styles.icon} />
     </TouchableOpacity>
@@ -58,7 +59,8 @@ const KnowMore = () => {
             </View>
             <View style={styles.member}>
               <Image source={require('./2.jpg')} style={styles.memberImage} />
-              <Text style={styles.memberName}>Jane Smith</Text>
+              <Text style={styles.memberName}>Utkarsh Mhatre</Text>
+              <Text style={styles.memberRole}>Director</Text>
     <TouchableOpacity onPress={() => Linking.openURL('https://www.linkedin.com/in/utkarshmhatre/')}>
       <Ionicons name="logo-linkedin" style={styles.icon} />
     </TouchableOpacity>
@@ -121,6 +123,15 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     marginBottom: 5,
+  },
+  memberRole: {
+    color: '#CCCCCC',
+    fontSize: 14,
+    marginBottom: 10,
+  },
+  githubIcon: {
+    color: '#000',
+    fontSize: 24,
   },
   linkedinIcon: {
     color: '#0077B5',
