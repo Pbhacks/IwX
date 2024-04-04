@@ -3,8 +3,7 @@ import { View, Text, StyleSheet, ScrollView, ImageBackground, Image, TouchableOp
 import Icon from 'react-native-vector-icons/FontAwesome'; // For GitHub icon
 import { Ionicons } from '@expo/vector-icons'; // For LinkedIn icon
 
-
-const KnowMore = () => {
+const KnowMore: React.FC = () => {
   return (
     <ImageBackground source={require('../screens/4.gif')} style={styles.background}>
       <ScrollView contentContainerStyle={styles.container}>
@@ -51,19 +50,19 @@ const KnowMore = () => {
               <Text style={styles.memberName}>Priyant Banerjee</Text>
               <Text style={styles.memberRole}>Founder & CEO</Text>
               <TouchableOpacity onPress={() => Linking.openURL('https://github.com/pbhacks')}>
-      <Icon name="github" style={styles.icon} />
-    </TouchableOpacity>
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.linkedin.com/in/pbhacks')}>
-      <Ionicons name="logo-linkedin" style={styles.icon} />
-    </TouchableOpacity>
+                <Icon name="github" style={styles.icon} />
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => Linking.openURL('https://www.linkedin.com/in/pbhacks')}>
+                <Ionicons name="logo-linkedin" style={styles.icon} />
+              </TouchableOpacity>
             </View>
             <View style={styles.member}>
               <Image source={require('./2.jpg')} style={styles.memberImage} />
               <Text style={styles.memberName}>Utkarsh Mhatre</Text>
               <Text style={styles.memberRole}>Director</Text>
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.linkedin.com/in/utkarshmhatre/')}>
-      <Ionicons name="logo-linkedin" style={styles.icon} />
-    </TouchableOpacity>
+              <TouchableOpacity onPress={() => Linking.openURL('https://www.linkedin.com/in/utkarshmhatre/')}>
+                <Ionicons name="logo-linkedin" style={styles.icon} />
+              </TouchableOpacity>
             </View>
           </View>
         </View>
@@ -128,14 +127,6 @@ const styles = StyleSheet.create({
     color: '#CCCCCC',
     fontSize: 14,
     marginBottom: 10,
-  },
-  githubIcon: {
-    color: '#000',
-    fontSize: 24,
-  },
-  linkedinIcon: {
-    color: '#0077B5',
-    fontSize: 24,
   },
 });
 

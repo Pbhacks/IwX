@@ -1,7 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, ImageSourcePropType } from 'react-native';
 
-const Home = ({ navigation }) => {
+type Props = {
+  navigation: any; // Adjust the type according to your navigation setup
+};
+
+const Home: React.FC<Props> = ({ navigation }) => {
   const handleNext = () => {
     navigation.navigate('Main');
   };
@@ -40,26 +44,28 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-buttonClass: {
-  width: 160, // Increased width for better visibility
-  height: 60, // Increased height for better touch area
-  borderWidth: 2, // Increased border width for better visibility
-  borderColor: '#00ff15',
-  borderRadius: 25, // Increased border radius for a more rounded, modern look
-  backgroundColor: 'linear-gradient(rgba(141, 21, 182, 1), rgba(229, 68, 233, 1))',
-  boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.1)', // Subtle shadow for a 3D effect
-  shadowColor: '#810e05',
-  justifyContent: 'center',
-  alignItems: 'center',
-  marginTop: 80,
-  padding: 10, // Padding for better text alignment
-},
-buttonText: {
-  fontSize: 18, // Increased font size for better readability
-  color: '#fff',
-  fontWeight: 'bold',
-  textTransform: 'uppercase', // Text in uppercase for a more button-like feel
-},
+  buttonClass: {
+    width: 160,
+    height: 60,
+    borderWidth: 2,
+    borderColor: '#00ff15',
+    borderRadius: 25,
+    backgroundColor: 'linear-gradient(rgba(141, 21, 182, 1), rgba(229, 68, 233, 1))',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 80,
+    padding: 10,
+    shadowColor: '#810e05',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 10,
+  },
+  buttonText: {
+    fontSize: 18,
+    color: '#fff',
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+  },
 });
 
 export default Home;

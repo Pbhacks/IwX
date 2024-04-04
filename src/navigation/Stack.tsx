@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../screens/Home';
-import BA from '../screens/BA'; // Import the BA component
+import BA from '../screens/BA';
 import Main from '../screens/Main';
 import Settings from '../screens/Settings';
 import ai from '../screens/ai';
@@ -13,11 +13,27 @@ import LpJapan from '../screens/subscreens/Japan/LpJapan';
 import LpSouthk from '../screens/subscreens/Southk/LpSouthk';
 import ChinaLS from '../screens/subscreens/China/ChinaLS';
 import ChinaOv from '../screens/subscreens/China/ChinaOv';
-import Performance from '../screens/Performance';
 
-const Stack = createStackNavigator();
 
-const MainStackNavigator = () => {
+const Stack = createStackNavigator<RootStackParamList>();
+
+type RootStackParamList = {
+  Main: undefined;
+  Home: undefined;
+  BA: undefined;
+  Itxassist: undefined;
+  LpChina: undefined;
+  ChinaLS: undefined;
+  ChinaOv: undefined;
+  LpIndia: undefined;
+  LpJapan: undefined;
+  LpSouthk: undefined;
+  Settings: undefined;
+  ai: undefined;
+  Know: undefined;
+};
+
+const MainStackNavigator: React.FC = () => {
   return (
     <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Main" component={Main} />
@@ -33,7 +49,6 @@ const MainStackNavigator = () => {
       <Stack.Screen name="Settings" component={Settings} />
       <Stack.Screen name="ai" component={ai} />
       <Stack.Screen name="Know" component={Know} />
-      <Stack.Screen name="Performance" component={Performance} />
     </Stack.Navigator>
   );
 };

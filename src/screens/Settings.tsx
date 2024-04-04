@@ -4,14 +4,14 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { MaterialIcons } from '@expo/vector-icons';
 import * as Location from 'expo-location';
 
-const Settings = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const [showNamePopup, setShowNamePopup] = useState(false);
-  const [name, setName] = useState('');
-  const [storedName, setStoredName] = useState('');
+const Settings: React.FC = () => {
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [showNamePopup, setShowNamePopup] = useState<boolean>(false);
+  const [name, setName] = useState<string>('');
+  const [storedName, setStoredName] = useState<string>('');
 
   useEffect(() => {
-    async function loadName() {
+    const loadName = async () => {
       try {
         const storedName = await AsyncStorage.getItem('name');
         if (storedName !== null) {
@@ -20,7 +20,7 @@ const Settings = () => {
       } catch (error) {
         console.error('Error loading name:', error.message);
       }
-    }
+    };
     loadName();
   }, []);
 
@@ -28,7 +28,7 @@ const Settings = () => {
     setDarkMode(!darkMode);
   };
 
-  const handleNameChange = (text) => {
+  const handleNameChange = (text: string) => {
     setName(text);
   };
 
@@ -75,8 +75,8 @@ const Settings = () => {
         <TouchableOpacity style={styles.settingButton} onPress={handleLocationClick}>
           <Text style={[styles.settingButtonText, darkMode && styles.darkModeText]}>Location</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.settingButton, darkMode ? styles.darkModeText : null]} onPress={toggleDarkMode}>
-          <Text style={[styles.settingButtonText, darkMode && styles.darkModeText]}>{darkMode ? 'Light Mode' : 'Dark Mode'}</Text>
+        <TouchableOpacity style={styles.settingButton} onPress={toggleDarkMode}>
+          <Text style={[styles.settingButtonText, darkMode && { color: 'white' }]}>{darkMode ? 'Light Mode' : 'Dark Mode'}</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.settingButton} onPress={navigateToCreditScore}>
           <Text style={[styles.settingButtonText, darkMode && styles.darkModeText]}>Show Credit Score</Text>

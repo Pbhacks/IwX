@@ -4,20 +4,21 @@ import { LinearGradient } from 'expo-linear-gradient';
 import Slider from '@react-native-community/slider'; 
 import { MaterialIcons } from '@expo/vector-icons'; 
 
-const BA = () => {
-  const [name, setName] = useState('');
-  const [location, setLocation] = useState('');
-  const [income, setIncome] = useState(0);
-  const [items, setItems] = useState([]);
-  const [itemName, setItemName] = useState('');
-  const [itemPrice, setItemPrice] = useState('');
-  const [showItemList, setShowItemList] = useState(false);
-  const [showModifyButton, setShowModifyButton] = useState(false);
-  const [modifyIncome, setModifyIncome] = useState(false);
-  const [modifyItems, setModifyItems] = useState(false);
-  const [monthlySalary, setMonthlySalary] = useState(0);
-  const [submittedNameLocation, setSubmittedNameLocation] = useState(false);
+const BA: React.FC = () => {
+  const [name, setName] = useState<string>('');
+  const [location, setLocation] = useState<string>('');
+  const [income, setIncome] = useState<number>(0);
+  const [items, setItems] = useState<{ id: number, name: string, price: number }[]>([]);
+  const [itemName, setItemName] = useState<string>('');
+  const [itemPrice, setItemPrice] = useState<string>('');
+  const [showItemList, setShowItemList] = useState<boolean>(false);
+  const [showModifyButton, setShowModifyButton] = useState<boolean>(false);
+  const [modifyIncome, setModifyIncome] = useState<boolean>(false);
+  const [modifyItems, setModifyItems] = useState<boolean>(false);
+  const [monthlySalary, setMonthlySalary] = useState<number>(0);
+  const [submittedNameLocation, setSubmittedNameLocation] = useState<boolean>(false);
 
+  
   const handleNameLocationSubmit = () => {
     if (name && location) {
       setSubmittedNameLocation(true);
@@ -57,7 +58,7 @@ const BA = () => {
     }
   };
 
-  const handleRemoveItem = (itemId) => {
+  const handleRemoveItem = (itemId: number) => {
     const updatedItems = items.filter((item) => item.id !== itemId);
     setItems(updatedItems);
   };

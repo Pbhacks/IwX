@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import AppStack from './src/navigation/Stack';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <NavigationContainer>
       <AppStack />

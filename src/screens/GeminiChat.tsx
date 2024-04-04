@@ -7,14 +7,19 @@ import * as GoogleGenerativeAI from "@google/generative-ai";
 import { showMessage } from "react-native-flash-message";
 import * as Speech from "expo-speech";
 
-const GeminiChat = () => {
-  const [messages, setMessages] = useState([]);
-  const [userInput, setUserInput] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [isSpeaking, setIsSpeaking] = useState(false);
-  const [showStopIcon, setShowStopIcon] = useState(false);
+type MessageType = {
+  text: string;
+  user: boolean;
+};
 
-  const API_KEY = "AIzaSyDUK34QoXewqmI3gDM49aCgyknGrSlB1FE";
+const GeminiChat: React.FC = () => {
+  const [messages, setMessages] = useState<MessageType[]>([]);
+  const [userInput, setUserInput] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+  const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
+  const [showStopIcon, setShowStopIcon] = useState<boolean>(false);
+
+  const API_KEY: string = "AIzaSyDUK34QoXewqmI3gDM49aCgyknGrSlB1FE";
 
   useEffect(() => {
     const startChat = async () => {
@@ -39,7 +44,7 @@ const GeminiChat = () => {
 
   const sendMessage = async () => {
     setLoading(true);
-    const userMessage = { text: userInput, user: true };
+    const userMessage: MessageType = { text: userInput, user: true };
     setMessages([...messages, userMessage]);
 
     const genAI = new GoogleGenerativeAI.GoogleGenerativeAI(API_KEY);
@@ -75,7 +80,7 @@ const GeminiChat = () => {
     setIsSpeaking(false);
   };
 
-  const renderMessage = ({ item }) => (
+  const renderMessage = ({ item }: { item: MessageType }) => (
     <View style={[styles.messageContainer, item.user ? styles.userMessageContainer : styles.botMessageContainer]}>
       <Text style={[styles.messageText, item.user ? styles.userMessageText : styles.botMessageText]}>
         {item.text}

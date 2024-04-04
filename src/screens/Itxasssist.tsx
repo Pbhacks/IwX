@@ -2,18 +2,23 @@ import React, { useState } from 'react';
 import { View, ScrollView, Text, StyleSheet, TouchableOpacity, Image, ImageBackground, TextInput } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
-const countries = [
+type Country = {
+  name: string;
+  image: any; // Assuming the image paths are correct
+};
+
+const countries: Country[] = [
   { name: 'China', image: require('./03.jpg') },
   { name: 'India', image: require('./04.jpg') },
   { name: 'Japan', image: require('./05.jpg') },
   { name: 'South Korea', image: require('./06.jpg') },
 ];
 
-const Itxassist = ({ navigation }) => {
-  const [searchText, setSearchText] = useState('');
-  const [showSearch, setShowSearch] = useState(false);
+const Itxassist: React.FC<{ navigation: any }> = ({ navigation }) => {
+  const [searchText, setSearchText] = useState<string>('');
+  const [showSearch, setShowSearch] = useState<boolean>(false);
 
-  const handleOptionClick = (option) => {
+  const handleOptionClick = (option: string) => {
     switch (option) {
       case 'China':
         navigation.navigate('LpChina');

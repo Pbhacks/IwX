@@ -2,10 +2,18 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Linking } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
-const Main = ({ navigation }) => {
+interface OptionBlockProps {
+  title: string;
+  description: string;
+  onPress: () => void;
+  showFullText: boolean;
+  setShowFullText: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Main: React.FC<{ navigation: any }> = ({ navigation }) => {
   const [showFullText, setShowFullText] = useState(false);
 
-  const handleOptionClick = (option) => {
+  const handleOptionClick = (option: string) => {
     switch (option) {
       case 'BudgetingAssistant':
         navigation.navigate('BA');
@@ -83,7 +91,7 @@ const Main = ({ navigation }) => {
   );
 };
 
-const OptionBlock = ({ title, description, onPress, showFullText, setShowFullText }) => {
+const OptionBlock: React.FC<OptionBlockProps> = ({ title, description, onPress, showFullText, setShowFullText }) => {
   return (
     <TouchableOpacity style={[styles.button, styles.card]} onPress={onPress}>
       <Text style={[styles.buttonText, { color: '#FFFF00' }]}>{title}</Text>
