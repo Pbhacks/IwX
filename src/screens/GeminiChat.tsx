@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, TextInput, FlatList, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, FlatList, StyleSheet, TouchableOpacity, ImageBackground } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
@@ -89,44 +89,46 @@ const GeminiChat: React.FC = () => {
   );
 
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={messages}
-        renderItem={renderMessage}
-        keyExtractor={(item) => item.text}
-        inverted
-      />
-      <View style={styles.inputContainer}>
-        <TouchableOpacity style={styles.micIcon} onPress={toggleSpeech}>
-          {isSpeaking ? (
-            <FontAwesome name="microphone-slash" size={24} color="white" />
-          ) : (
-            <FontAwesome name="microphone" size={24} color="white" />
-          )}
-        </TouchableOpacity>
-        <TextInput
-          placeholder="Type a message"
-          onChangeText={setUserInput}
-          value={userInput}
-          onSubmitEditing={sendMessage}
-          style={styles.input}
-          placeholderTextColor="#fff"
+    <ImageBackground source={require('./glow.gif')} style={styles.backgroundImage}>
+      <View style={styles.container}>
+        <FlatList
+          data={messages}
+          renderItem={renderMessage}
+          keyExtractor={(item) => item.text}
+          inverted
         />
-        <TouchableOpacity style={styles.sendButton} onPress={sendMessage}>
-          <Text style={styles.sendButtonText}>Send</Text>
-        </TouchableOpacity>
-        {showStopIcon && (
-          <TouchableOpacity style={styles.stopIcon} onPress={clearMessages}>
-            <Entypo name="controller-stop" size={24} color="white" />
+        <View style={styles.inputContainer}>
+          <TouchableOpacity style={styles.micIcon} onPress={toggleSpeech}>
+            {isSpeaking ? (
+              <FontAwesome name="microphone-slash" size={24} color="white" />
+            ) : (
+              <FontAwesome name="microphone" size={24} color="white" />
+            )}
           </TouchableOpacity>
-        )}
+          <TextInput
+            placeholder="Type a message"
+            onChangeText={setUserInput}
+            value={userInput}
+            onSubmitEditing={sendMessage}
+            style={styles.input}
+            placeholderTextColor="#fff"
+          />
+          <TouchableOpacity style={styles.sendButton} onPress={sendMessage}>
+            <Text style={styles.sendButtonText}>Send</Text>
+          </TouchableOpacity>
+          {showStopIcon && (
+            <TouchableOpacity style={styles.stopIcon} onPress={clearMessages}>
+              <Entypo name="controller-stop" size={24} color="white" />
+            </TouchableOpacity>
+          )}
+        </View>
       </View>
-    </View>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "black" },
+  container: { flex: 1 },
   messageContainer: { padding: 10, marginVertical: 5 },
   messageText: { fontSize: 16, color: "white" },
   userMessageContainer: { backgroundColor: "blue", alignSelf: "flex-end", borderRadius: 10 },
@@ -174,6 +176,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginLeft: 5,
+  },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center"
   },
 });
 

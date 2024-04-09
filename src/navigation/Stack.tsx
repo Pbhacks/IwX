@@ -15,6 +15,7 @@ import ChinaLS from '../screens/subscreens/China/ChinaLS';
 import ChinaOv from '../screens/subscreens/China/ChinaOv';
 
 
+
 const Stack = createStackNavigator<RootStackParamList>();
 
 type RootStackParamList = {
@@ -31,6 +32,7 @@ type RootStackParamList = {
   Settings: undefined;
   ai: undefined;
   Know: undefined;
+  
 };
 
 const MainStackNavigator: React.FC = () => {
@@ -49,6 +51,7 @@ const MainStackNavigator: React.FC = () => {
       <Stack.Screen name="Settings" component={Settings} />
       <Stack.Screen name="ai" component={ai} />
       <Stack.Screen name="Know" component={Know} />
+     
     </Stack.Navigator>
   );
 };

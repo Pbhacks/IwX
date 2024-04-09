@@ -4,7 +4,6 @@ import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, ImageSourceP
 type Props = {
   navigation: any; // Adjust the type according to your navigation setup
 };
-
 const Home: React.FC<Props> = ({ navigation }) => {
   const handleNext = () => {
     navigation.navigate('Main');

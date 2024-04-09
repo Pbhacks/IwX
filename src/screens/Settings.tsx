@@ -60,7 +60,7 @@ const Settings: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <ImageBackground source={require('./3.jpg')} style={styles.backgroundImage}>
+      <ImageBackground source={require('./icegif.gif')} style={styles.backgroundImage}>
         {storedName !== '' && (
           <View style={styles.upperHalf}>
             <Text style={styles.greetingText}>Hello,</Text>
