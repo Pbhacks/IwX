@@ -1,71 +1,46 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
-const ChinaOv = () => {
+const SouthKOv = () => {
   return (
     <ScrollView style={styles.container}>
-      {/* China Overview */}
+      {/* India Overview */}
       <View style={styles.overviewContainer}>
-        <Text style={styles.title}>People's Republic of China</Text>
+        <Text style={styles.title}>Korea, Republic of</Text>
        
           <Text style={styles.lastReviewed}>
-            Last reviewed - 15 January 2024
+            Last reviewed -27 February 2024
            </Text>
         <Text style={styles.details}>
-        The People's Republic of China, commonly known as China, is one of the most populous countries in the world,
-         with over 1.3 billion people. Located in East Asia along the coastline of the Pacific Ocean, China is one of
-          the largest countries in the world by land area. The capital of China is Beijing, and the official language 
-          is Mandarin Chinese.
+        Located between China and Japan, Korea is the centre of aviation and maritime logistics connecting the Asia-Pacific
+         region, as well as Eurasia and the Americas. The Republic of Korea (South Korea or Korea) is divided into nine provinces,
+          with Seoul as the capital. The official language of South Korea is Korean, and the currency is the won (KRW).
         </Text>
         </View>
         <View style={styles.overviewContainer}>  
         <Text style={styles.details}>
-        The official currency of China is the renminbi (yuan) (CNY), and it is held in a floating exchange-rate system.
-         It used to be managed primarily against the United States dollar (USD). Since 2005, the renminbi has been referenced
-          to a basket of foreign currencies. On 1 October 2016, the renminbi was added into the International Monetary Fund’s (IMF’s) 
-          Special Drawing Rights (SDR) basket.
+        Since the 1960s, South Korea has achieved an incredible record of growth and global integration to become a high-tech
+         industrialised economy. In 2006, South Korea joined the trillion-dollar club of world economies. In 2022, Korea was the
+          13th largest economy in the world by the nominal gross domestic product (GDP) according to the World Bank. Korea’s economic 
+          fundamentals are solid, with its trade volume ranked ninth in the world as of 2020. Initially, a system of close government and
+           business ties, including directed credit and import restrictions, made this success possible. The government promoted the import
+            of raw materials and technology at the expense of consumer goods and encouraged savings and investment over consumption. Korea
+             adopted numerous economic reforms following the global crisis, including greater openness to foreign investment and imports.
         </Text>
         </View>
 
         <View style={styles.overviewContainer}>  
         <Text style={styles.details}>
-        For centuries, China stood as a leading civilisation, outpacing the rest of the world in technology, arts, and sciences.
-         After World War II, the Communists, under Mao Zedong, established a socialist system. After 1978, Mao's successor, Deng Xiaoping, 
-         and other leaders focused on market-oriented economic development, and China began to generate significant and steady growth in investment,
-          consumption, and standards of living.
+        More recently, the Korean government’s policy has focused on expanding investment and strengthening digital infrastructure in the
+         country through its Digital New Deal policy. According to the World Economic Forum (WEF), the dissemination of information and
+          communication technologies (ICT) in Korea has ranked first in the world. Korea succeeded in commercialising the world’s first
+           5G network (April 2019), proving that the country is a global leader in the ICT field.  During 2021, the Korean economy recorded 
+           a growth rate of 4.1%.  The growth rate declined to 2.6% in 2022 and is estimated to further decline to 1.4% in 2023.  South Korea’s
+            per capita gross national income was 29.7 times the level of North Korea in 2022.
         </Text>
         </View>
-        <View style={styles.overviewContainer}>  
-        <Text style={styles.details}>
-        Since then, China has generally implemented reforms in a gradual fashion. As its role in world trade has steadily grown,
-         its importance to the international economy has also increased apace. China is also the largest trading nation in the
-          world and the largest exporter and second largest importer of goods. A milestone was achieved in mid-2010 when China's
-           economy was valued at USD 1.33 trillion and became the world's second largest economy, surpassing Japan and second only
-            to that of the United States. 
-        </Text>
-        </View>
+         
 
-        <View style={styles.overviewContainer}>  
-        <Text style={styles.details}>
-        China's growth comes from both huge state investments in infrastructure and heavy industries as well as private
-         sector expansion in light industries.
-        </Text>
-        </View>
-        <View style={styles.overviewContainer}>  
-        <Text style={styles.details}>
-        Exports had been China's major economic driver, but since the 2008 global financial crisis, which seriously affected
-         the international markets of China export products, the Chinese government shifted the focus to stimulate investment
-          and consumption in domestic markets.
-        </Text>
-        </View>
-
-       
-    
-
-
-{/* <View style={styles.header}>
-      <Text style={styles.headerText}>Quick rates and dates</Text>
-    </View> */}
   <ScrollView horizontal={true}>
     <View style={styles.table}>
     <View style={styles.header}>
@@ -80,7 +55,7 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Headline CIT rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>25</Text>
+         <Text style={styles.cellText}>24</Text>
       </View>
       </View>
 
@@ -93,8 +68,8 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>CIT return due date</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>For annual CIT filing, within five months following the end of the tax year.</Text>
-         <Text style={styles.cellText}>For monthly or quarterly provisional CIT filing, within 15 days following the end of each month/quarter.</Text>
+         <Text style={styles.cellText}>Interim tax return: within two months from the end of the interim six-month period;
+         {'\n'}Annual tax return: within three months from the end of the fiscal year.</Text>
         </View>
 
 
@@ -105,7 +80,7 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>CIT final payment due date</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>Within five months following the end of the tax year.</Text>
+         <Text style={styles.cellText}>Along with the filing of the returns (payment in instalments is allowed in case of election).</Text>
         </View>
       
     
@@ -115,8 +90,7 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>CIT estimated payment due dates</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>Quarterly or monthly instalment to be paid within 
-          15 days following the end of each month/quarter.</Text>
+         <Text style={styles.cellText}>NA</Text>
         </View>
 
 
@@ -150,9 +124,9 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>PIT return due date</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>Resident: Between 1 March and 30 June for annual reconciliation return on comprehensive income. 
-                                        15th day of the month following the month when other income was received.</Text>
-         <Text style={styles.cellText}>Non-resident: 15th day of the month following the month when income was received.</Text>
+         <Text style={styles.cellText}>
+         31 May
+         </Text>
         </View>
 
 
@@ -163,7 +137,7 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>PIT final payment due date</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>	Same as the due date for PIT return.</Text>
+         <Text style={styles.cellText}>31 May (payment in instalments is allowed in case of election)</Text>
         </View>
       
     
@@ -173,7 +147,7 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>PIT estimated payment due dates</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>15th day of the month following the month when the income was received.</Text>
+         <Text style={styles.cellText}>NA</Text>
         </View>
 
 
@@ -192,7 +166,9 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Standard VAT rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>13, 9, or 6 depending on the types of goods and services</Text>
+         <Text style={styles.cellText}>
+         10
+         </Text>
       </View>
       </View>
 
@@ -208,7 +184,10 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>WHT rates (%) {'\n'}(Dividends/Interest/Royalties)</Text>
         </View>
-         <Text style={styles.cellText}>Resident: NA; {'\n'} Non-resident: 10 / 10 / 10</Text>
+         <Text style={styles.cellText}>
+         Resident corporation (individual): 0 (14% for individual, 14% for distribution of profit from securities investment trusts to corporation) / 14 (14% for individual, 25% for interest from a non-commercial loan) / 0;
+              {'\n'}Non-resident: 20 / 20 (14% for interest derived from bonds issued by domestic corp.'s, etc., 0 for government bonds, etc.) / 20
+         </Text>
       </View>
       </View>
 
@@ -223,13 +202,14 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Headline corporate capital gains tax rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>Capital gains are subject to the normal CIT rate.</Text>
+         <Text style={styles.cellText}>24 (same as the normal CIT rates).</Text>
       </View>
       <View style={styles.row}>
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Headline individual capital gains tax rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>20</Text>
+         <Text style={styles.cellText}>
+         45 for registered business-purpose real property held for two years or more (varying depending on the type of asset, holding period, etc.). </Text>
       </View>
       </View>
 
@@ -242,13 +222,13 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Headline inheritance tax rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>NA</Text>
+         <Text style={styles.cellText}>50</Text>
       </View>
       <View style={styles.row}>
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Headline gift tax rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>NA</Text>
+         <Text style={styles.cellText}>50</Text>
       </View>
       </View>
 
@@ -286,10 +266,10 @@ const ChinaOv = () => {
         All information in this chart is up to date as of the 'Last reviewed' date on the corresponding territory Overview page. 
         This chart has been prepared for general guidance on matters of interest only, and does not constitute professional advice.
          You should not act upon the information contained in this chart without obtaining specific professional advice.
-         No representation or warranty (express or implied) is given as to the accuracy or completeness of the information contained
-        in this chart, and, to the extent permitted by law, Iwx does not accept or assume any liability, responsibility or duty of
-        care for any consequences of you or anyone else acting, or refraining to act, in reliance on the information contained in 
-        this chart or for any decision based on it.</Text>
+          No representation or warranty (express or implied) is given as to the accuracy or completeness of the information contained
+           in this chart, and, to the extent permitted by law, Iwx does not accept or assume any liability, responsibility or duty of 
+           care for any consequences of you or anyone else acting, or refraining to act, in reliance on the information contained in 
+           this chart or for any decision based on it.</Text>
         </View>
 
 
@@ -434,4 +414,4 @@ const ChinaOv = () => {
           },
         });
         
-        export default ChinaOv;
+        export default SouthKOv;

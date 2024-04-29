@@ -1,71 +1,25 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
-const ChinaOv = () => {
+const JapanOv = () => {
   return (
     <ScrollView style={styles.container}>
       {/* China Overview */}
       <View style={styles.overviewContainer}>
-        <Text style={styles.title}>People's Republic of China</Text>
+        <Text style={styles.title}>Japan</Text>
        
           <Text style={styles.lastReviewed}>
-            Last reviewed - 15 January 2024
+            Last reviewed -23 January 2024
            </Text>
         <Text style={styles.details}>
-        The People's Republic of China, commonly known as China, is one of the most populous countries in the world,
-         with over 1.3 billion people. Located in East Asia along the coastline of the Pacific Ocean, China is one of
-          the largest countries in the world by land area. The capital of China is Beijing, and the official language 
-          is Mandarin Chinese.
+        Japan, a nation in East Asia, is an archipelago of 6,852 islands in the Pacific Ocean.
+         It is a constitutional monarchy, with Tokyo as its capital. The economy of Japan is the
+          third largest in the world after the United States and the People's Republic of China.
+         Japan's currency is the yen (JPY).
         </Text>
         </View>
-        <View style={styles.overviewContainer}>  
-        <Text style={styles.details}>
-        The official currency of China is the renminbi (yuan) (CNY), and it is held in a floating exchange-rate system.
-         It used to be managed primarily against the United States dollar (USD). Since 2005, the renminbi has been referenced
-          to a basket of foreign currencies. On 1 October 2016, the renminbi was added into the International Monetary Fund’s (IMF’s) 
-          Special Drawing Rights (SDR) basket.
-        </Text>
-        </View>
+         
 
-        <View style={styles.overviewContainer}>  
-        <Text style={styles.details}>
-        For centuries, China stood as a leading civilisation, outpacing the rest of the world in technology, arts, and sciences.
-         After World War II, the Communists, under Mao Zedong, established a socialist system. After 1978, Mao's successor, Deng Xiaoping, 
-         and other leaders focused on market-oriented economic development, and China began to generate significant and steady growth in investment,
-          consumption, and standards of living.
-        </Text>
-        </View>
-        <View style={styles.overviewContainer}>  
-        <Text style={styles.details}>
-        Since then, China has generally implemented reforms in a gradual fashion. As its role in world trade has steadily grown,
-         its importance to the international economy has also increased apace. China is also the largest trading nation in the
-          world and the largest exporter and second largest importer of goods. A milestone was achieved in mid-2010 when China's
-           economy was valued at USD 1.33 trillion and became the world's second largest economy, surpassing Japan and second only
-            to that of the United States. 
-        </Text>
-        </View>
-
-        <View style={styles.overviewContainer}>  
-        <Text style={styles.details}>
-        China's growth comes from both huge state investments in infrastructure and heavy industries as well as private
-         sector expansion in light industries.
-        </Text>
-        </View>
-        <View style={styles.overviewContainer}>  
-        <Text style={styles.details}>
-        Exports had been China's major economic driver, but since the 2008 global financial crisis, which seriously affected
-         the international markets of China export products, the Chinese government shifted the focus to stimulate investment
-          and consumption in domestic markets.
-        </Text>
-        </View>
-
-       
-    
-
-
-{/* <View style={styles.header}>
-      <Text style={styles.headerText}>Quick rates and dates</Text>
-    </View> */}
   <ScrollView horizontal={true}>
     <View style={styles.table}>
     <View style={styles.header}>
@@ -80,7 +34,7 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Headline CIT rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>25</Text>
+         <Text style={styles.cellText}>23.2</Text>
       </View>
       </View>
 
@@ -93,8 +47,8 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>CIT return due date</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>For annual CIT filing, within five months following the end of the tax year.</Text>
-         <Text style={styles.cellText}>For monthly or quarterly provisional CIT filing, within 15 days following the end of each month/quarter.</Text>
+         <Text style={styles.cellText}>Within two months after the end of company's annual 
+         accounting period.</Text>
         </View>
 
 
@@ -105,7 +59,8 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>CIT final payment due date</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>Within five months following the end of the tax year.</Text>
+         <Text style={styles.cellText}>Within two months after the end of company's annual
+          accounting period</Text>
         </View>
       
     
@@ -115,8 +70,8 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>CIT estimated payment due dates</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>Quarterly or monthly instalment to be paid within 
-          15 days following the end of each month/quarter.</Text>
+         <Text style={styles.cellText}>Within two months after the end of the sixth month
+          of the corporation's accounting period.</Text>
         </View>
 
 
@@ -134,7 +89,7 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Headline PIT rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>45</Text>
+         <Text style={styles.cellText}>45, plus 2.1% surtax.</Text>
       </View>
       </View>
  
@@ -150,9 +105,7 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>PIT return due date</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>Resident: Between 1 March and 30 June for annual reconciliation return on comprehensive income. 
-                                        15th day of the month following the month when other income was received.</Text>
-         <Text style={styles.cellText}>Non-resident: 15th day of the month following the month when income was received.</Text>
+         <Text style={styles.cellText}>15 March</Text>
         </View>
 
 
@@ -163,7 +116,7 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>PIT final payment due date</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>	Same as the due date for PIT return.</Text>
+         <Text style={styles.cellText}>	15 March</Text>
         </View>
       
     
@@ -173,7 +126,7 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>PIT estimated payment due dates</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>15th day of the month following the month when the income was received.</Text>
+         <Text style={styles.cellText}>31 July and 30 November</Text>
         </View>
 
 
@@ -192,7 +145,7 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Standard VAT rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>13, 9, or 6 depending on the types of goods and services</Text>
+         <Text style={styles.cellText}>Consumption tax: 10</Text>
       </View>
       </View>
 
@@ -208,7 +161,7 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>WHT rates (%) {'\n'}(Dividends/Interest/Royalties)</Text>
         </View>
-         <Text style={styles.cellText}>Resident: NA; {'\n'} Non-resident: 10 / 10 / 10</Text>
+         <Text style={styles.cellText}>Resident: 20 / 20 / 0;{'\n'} Non-resident: 15 / 20 / 20</Text>
       </View>
       </View>
 
@@ -229,7 +182,10 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Headline individual capital gains tax rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>20</Text>
+         <Text style={styles.cellText}>Gains arising from sale of stock are taxed at a total rate of 
+         20.315% (15.315% for national tax purposes and 5% local tax).{'\n'}Gains arising from sale real
+          property are taxed at a total rate of up to 39.63% (30.63% for national tax purposes and 9% 
+          local tax) depending on various factors.</Text>
       </View>
       </View>
 
@@ -242,13 +198,13 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Headline inheritance tax rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>NA</Text>
+         <Text style={styles.cellText}>55</Text>
       </View>
       <View style={styles.row}>
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Headline gift tax rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>NA</Text>
+         <Text style={styles.cellText}>55</Text>
       </View>
       </View>
 
@@ -286,10 +242,10 @@ const ChinaOv = () => {
         All information in this chart is up to date as of the 'Last reviewed' date on the corresponding territory Overview page. 
         This chart has been prepared for general guidance on matters of interest only, and does not constitute professional advice.
          You should not act upon the information contained in this chart without obtaining specific professional advice.
-         No representation or warranty (express or implied) is given as to the accuracy or completeness of the information contained
-        in this chart, and, to the extent permitted by law, Iwx does not accept or assume any liability, responsibility or duty of
-        care for any consequences of you or anyone else acting, or refraining to act, in reliance on the information contained in 
-        this chart or for any decision based on it.</Text>
+          No representation or warranty (express or implied) is given as to the accuracy or completeness of the information contained
+           in this chart, and, to the extent permitted by law, Iwx does not accept or assume any liability, responsibility or duty of 
+           care for any consequences of you or anyone else acting, or refraining to act, in reliance on the information contained in 
+           this chart or for any decision based on it.</Text>
         </View>
 
 
@@ -434,4 +390,4 @@ const ChinaOv = () => {
           },
         });
         
-        export default ChinaOv;
+        export default JapanOv;

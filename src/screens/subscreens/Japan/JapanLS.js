@@ -1,28 +1,34 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
 
-const LpJapan = ({ navigation }) => {
-  const handleOptionClick = (option) => {
-    switch (option) {
-      case 'LawsSelect':
-        navigation.navigate('JapanLS');
-        break;
-      case 'TaxRebate':
-        navigation.navigate('JapanRebate');
-        break;
-      default:
-        break;
-    }}
+const JapanLS = ({ navigation }) => {
+    const handleOptionClick = (option) => {
+        switch (option) {
+          case 'Overview':
+            navigation.navigate('JapanOv');
+            break;
+          case 'Corporate':
+            navigation.navigate('JapanCorp');
+            break;
+          case 'Individuals':
+            navigation.navigate('JapanIndiv');
+            break;
+         
+          default:
+            break;
+        }}
 
   return (
     <View style={styles.container}>
       <ImageBackground source={require('./05.jpg')} style={styles.background} blurRadius={5}>
-        <Text style={styles.title}>Japan</Text>
-        <TouchableOpacity style={styles.buttonClass}  onPress={() => handleOptionClick('LawsSelect')}>
-          <Text style={styles.buttonText}>Tax Laws</Text></TouchableOpacity>
-          <TouchableOpacity style={styles.buttonClass}   onPress={() => handleOptionClick('TaxRebate')}>
-          <Text style={styles.buttonText}>Tax Rebate</Text>
-        </TouchableOpacity>
+      <TouchableOpacity style={styles.buttonClass}  onPress={() => handleOptionClick('Overview')}>
+          <Text style={styles.buttonText}>Overview</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.buttonClass}  onPress={() => handleOptionClick('Corporate')}>
+          <Text style={styles.buttonText}>Corporate</Text></TouchableOpacity>
+          <TouchableOpacity style={styles.buttonClass}   onPress={() => handleOptionClick('Individuals')}>
+          <Text style={styles.buttonText}>Individuals</Text></TouchableOpacity>
+       
+        
       </ImageBackground>
     </View>
   );
@@ -51,8 +57,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonClass: {
-    width: 140,
-    height: 50,
+    width: 240,
+    height: 70,
     borderWidth: 1,
     borderColor: '#00ff15',
     borderRadius: 18,
@@ -70,4 +76,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LpJapan;
+export default JapanLS;

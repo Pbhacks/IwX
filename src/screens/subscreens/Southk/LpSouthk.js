@@ -1,18 +1,26 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
 
-const LpSouthk = ({ navigation }) => {
-  const handleNext = () => {
-    navigation.navigate('Main');
-  };
+const LpSouthK = ({ navigation }) => {
+  const handleOptionClick = (option) => {
+    switch (option) {
+      case 'LawsSelect':
+        navigation.navigate('SouthKLS');
+        break;
+      case 'ChinaRebate':
+        navigation.navigate('SouthKRebate');
+        break;
+      default:
+        break;
+    }}
 
   return (
     <View style={styles.container}>
       <ImageBackground source={require('./06.jpg')} style={styles.background} blurRadius={5}>
         <Text style={styles.title}>South Korea</Text>
-        <TouchableOpacity style={styles.buttonClass} onPress={handleNext}>
+        <TouchableOpacity style={styles.buttonClass}  onPress={() => handleOptionClick('LawsSelect')}>
           <Text style={styles.buttonText}>Tax Laws</Text></TouchableOpacity>
-          <TouchableOpacity style={styles.buttonClass} onPress={handleNext}>
+          <TouchableOpacity style={styles.buttonClass}   onPress={() => handleOptionClick('ChinaRebate')}>
           <Text style={styles.buttonText}>Tax Rebate</Text>
         </TouchableOpacity>
       </ImageBackground>
@@ -62,4 +70,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LpSouthk;
+export default LpSouthK;

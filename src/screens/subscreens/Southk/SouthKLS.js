@@ -1,38 +1,38 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
 
-const ChinaLS = ({ navigation }) => {
+const SouthKLS = ({ navigation }) => {
     const handleOptionClick = (option) => {
         switch (option) {
           case 'Overview':
-            navigation.navigate('ChinaOv');
+            navigation.navigate('SouthKOv');
             break;
           case 'Corporate':
-            navigation.navigate('ChinaCorp');
+            navigation.navigate('SouthKCorp');
             break;
-          case 'Individual':
-            navigation.navigate('ChinaIndv');
+          case 'Individuals':
+            navigation.navigate('SouthKIndiv');
             break;
          
           default:
             break;
         }}
 
-  return (
-    <View style={styles.container}>
-      <ImageBackground source={require('./03.jpg')} style={styles.background} blurRadius={5}>
-      <TouchableOpacity style={styles.buttonClass}  onPress={() => handleOptionClick('Overview')}>
-          <Text style={styles.buttonText}>Overview</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.buttonClass}  onPress={() => handleOptionClick('Corporate')}>
-          <Text style={styles.buttonText}>Corporate</Text></TouchableOpacity>
-          <TouchableOpacity style={styles.buttonClass}   onPress={() => handleOptionClick('Individual')}>
-          <Text style={styles.buttonText}>Individuals</Text></TouchableOpacity>
-       
-        
-      </ImageBackground>
-    </View>
-  );
-};
+        return (
+            <View style={styles.container}>
+              <ImageBackground source={require('./06.jpg')} style={styles.background} blurRadius={5}>
+              <TouchableOpacity style={styles.buttonClass}  onPress={() => handleOptionClick('Overview')}>
+                  <Text style={styles.buttonText}>Overview</Text></TouchableOpacity>
+                <TouchableOpacity style={styles.buttonClass}  onPress={() => handleOptionClick('Corporate')}>
+                  <Text style={styles.buttonText}>Corporate</Text></TouchableOpacity>
+                  <TouchableOpacity style={styles.buttonClass}   onPress={() => handleOptionClick('Individuals')}>
+                  <Text style={styles.buttonText}>Individuals</Text></TouchableOpacity>
+               
+                
+              </ImageBackground>
+            </View>
+          );
+        };
 
 const styles = StyleSheet.create({
   container: {
@@ -76,4 +76,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ChinaLS;
+export default SouthKLS;

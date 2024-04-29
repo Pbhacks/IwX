@@ -17,7 +17,7 @@ const Itxassist = ({ navigation }) => {
         navigation.navigate('LpJapan');
         break;
       case 'SouthK':
-        navigation.navigate('LpSouthk');
+        navigation.navigate('LpSouthK');
         break;
       default:
         break;

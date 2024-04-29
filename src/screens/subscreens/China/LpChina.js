@@ -7,8 +7,8 @@ const LpChina = ({ navigation }) => {
       case 'LawsSelect':
         navigation.navigate('ChinaLS');
         break;
-      case 'India':
-        navigation.navigate('LpIndia');
+      case 'ChinaRebate':
+        navigation.navigate('ChinaRebate');
         break;
       default:
         break;
@@ -20,7 +20,7 @@ const LpChina = ({ navigation }) => {
         <Text style={styles.title}>China</Text>
         <TouchableOpacity style={styles.buttonClass}  onPress={() => handleOptionClick('LawsSelect')}>
           <Text style={styles.buttonText}>Tax Laws</Text></TouchableOpacity>
-          <TouchableOpacity style={styles.buttonClass}   onPress={() => handleOptionClick('India')}>
+          <TouchableOpacity style={styles.buttonClass}   onPress={() => handleOptionClick('ChinaRebate')}>
           <Text style={styles.buttonText}>Tax Rebate</Text>
         </TouchableOpacity>
       </ImageBackground>
