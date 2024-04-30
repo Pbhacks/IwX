@@ -1,71 +1,46 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
-const ChinaOv = () => {
+const IndiaOv = () => {
   return (
     <ScrollView style={styles.container}>
-      {/* China Overview */}
+      {/* India Overview */}
       <View style={styles.overviewContainer}>
-        <Text style={styles.title}>People's Republic of China</Text>
+        <Text style={styles.title}>India</Text>
        
           <Text style={styles.lastReviewed}>
-            Last reviewed - 15 January 2024
+            Last reviewed -14 December 2023
            </Text>
         <Text style={styles.details}>
-        The People's Republic of China, commonly known as China, is one of the most populous countries in the world,
-         with over 1.3 billion people. Located in East Asia along the coastline of the Pacific Ocean, China is one of
-          the largest countries in the world by land area. The capital of China is Beijing, and the official language 
-          is Mandarin Chinese.
+        India, a country in South East Asia, is the seventh-largest country by geographical area,
+         the second-most populous country with over 1.25 billion people, and the most populous democracy
+          in the world. It is bounded by the Indian Ocean to the south, the Arabian Sea to the southwest,
+           and the Bay of Bengal to the southeast. It shares land borders with Pakistan to the west; Bhutan,
+            the People's Republic of China, and Nepal to the northeast; and Bangladesh and Myanmar to the east.
+             India is divided into 28 states and eight union territories, with New Delhi as the capital. 
+             The official languages of India are Hindi and English, and the currency is the Indian rupee (INR).
         </Text>
         </View>
         <View style={styles.overviewContainer}>  
         <Text style={styles.details}>
-        The official currency of China is the renminbi (yuan) (CNY), and it is held in a floating exchange-rate system.
-         It used to be managed primarily against the United States dollar (USD). Since 2005, the renminbi has been referenced
-          to a basket of foreign currencies. On 1 October 2016, the renminbi was added into the International Monetary Fund’s (IMF’s) 
-          Special Drawing Rights (SDR) basket.
+        India gained independence in 1947 and is developing into an open-market economy. Economic liberalisation,
+         including reduced controls on foreign trade and investment, began in the early 1990s and has served to 
+         accelerate the country's growth rate, estimated at 7% in tax year 2022/23 (tax year begins on 1 April 
+         and ends on 31 March of the following year; note that, in India, 'tax year' is referred to as 'financial
+          year' and the year following a 'tax year' is referred to as 'assessment year').
         </Text>
         </View>
 
         <View style={styles.overviewContainer}>  
         <Text style={styles.details}>
-        For centuries, China stood as a leading civilisation, outpacing the rest of the world in technology, arts, and sciences.
-         After World War II, the Communists, under Mao Zedong, established a socialist system. After 1978, Mao's successor, Deng Xiaoping, 
-         and other leaders focused on market-oriented economic development, and China began to generate significant and steady growth in investment,
-          consumption, and standards of living.
+        Over the seven decades since independence, the country has achieved self-sufficiency in terms of food and
+         grains. India is now a net exporter of food. Life expectancy has more than doubled, literacy rates have 
+         quadrupled, health conditions have improved, and a sizeable middle class has emerged. India is now home 
+         to globally recognised companies in pharmaceuticals, automobiles, steel, and information and space technologies.
         </Text>
         </View>
-        <View style={styles.overviewContainer}>  
-        <Text style={styles.details}>
-        Since then, China has generally implemented reforms in a gradual fashion. As its role in world trade has steadily grown,
-         its importance to the international economy has also increased apace. China is also the largest trading nation in the
-          world and the largest exporter and second largest importer of goods. A milestone was achieved in mid-2010 when China's
-           economy was valued at USD 1.33 trillion and became the world's second largest economy, surpassing Japan and second only
-            to that of the United States. 
-        </Text>
-        </View>
+         
 
-        <View style={styles.overviewContainer}>  
-        <Text style={styles.details}>
-        China's growth comes from both huge state investments in infrastructure and heavy industries as well as private
-         sector expansion in light industries.
-        </Text>
-        </View>
-        <View style={styles.overviewContainer}>  
-        <Text style={styles.details}>
-        Exports had been China's major economic driver, but since the 2008 global financial crisis, which seriously affected
-         the international markets of China export products, the Chinese government shifted the focus to stimulate investment
-          and consumption in domestic markets.
-        </Text>
-        </View>
-
-       
-    
-
-
-{/* <View style={styles.header}>
-      <Text style={styles.headerText}>Quick rates and dates</Text>
-    </View> */}
   <ScrollView horizontal={true}>
     <View style={styles.table}>
     <View style={styles.header}>
@@ -80,7 +55,12 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Headline CIT rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>25</Text>
+         <Text style={styles.cellText}>Domestic companies:
+                                        {'\n'} 1. 25% or 30% (plus applicable surcharge and cess) depending on turnover.
+                                        {'\n'} 2. 15% or 22% (plus applicable surcharge and cess) subject to certain conditions.
+                                        {'\n'} Foreign companies (having PE in India): 40% (plus applicable surcharge and cess)
+                                        {'\n'} Please refer to the Taxes on corporate income section for effective tax rates
+                                         for different classes of companies.</Text>
       </View>
       </View>
 
@@ -93,8 +73,9 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>CIT return due date</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>For annual CIT filing, within five months following the end of the tax year.</Text>
-         <Text style={styles.cellText}>For monthly or quarterly provisional CIT filing, within 15 days following the end of each month/quarter.</Text>
+         <Text style={styles.cellText}>31 October of succeeding tax year.
+         {'\n'}30 November of succeeding tax year if the corporation has international transactions
+          with associate affiliates/specified domestic transactions.</Text>
         </View>
 
 
@@ -105,7 +86,7 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>CIT final payment due date</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>Within five months following the end of the tax year.</Text>
+         <Text style={styles.cellText}>Before submission of return of income.</Text>
         </View>
       
     
@@ -115,8 +96,9 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>CIT estimated payment due dates</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>Quarterly or monthly instalment to be paid within 
-          15 days following the end of each month/quarter.</Text>
+         <Text style={styles.cellText}>Estimated tax is due in quarterly instalments payable before the 
+         15th day of each quarter of tax year (i.e. 15 June [15%], 15 September [45%], 15 December [75%],
+          15 March [100%]).</Text>
         </View>
 
 
@@ -134,7 +116,8 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Headline PIT rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>45</Text>
+         <Text style={styles.cellText}>New personal tax regime: 39.00 (i.e. 30% + 25% surcharge + 4% health and education cess);
+        {'\n'}Old tax regime: 42.744 (i.e. 30% + 37% surcharge + 4% health and education cess)</Text>
       </View>
       </View>
  
@@ -150,9 +133,13 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>PIT return due date</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>Resident: Between 1 March and 30 June for annual reconciliation return on comprehensive income. 
-                                        15th day of the month following the month when other income was received.</Text>
-         <Text style={styles.cellText}>Non-resident: 15th day of the month following the month when income was received.</Text>
+         <Text style={styles.cellText}>
+         31 July of the succeeding tax year.
+            {'\n'}31 October of succeeding tax year if accounts are required to be audited under income tax law or under any 
+            other law for the time being in force.
+            {'\n'}30 November of succeeding tax year if there are international transactions with associate affiliates/specified 
+            domestic transactions
+         </Text>
         </View>
 
 
@@ -163,7 +150,7 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>PIT final payment due date</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>	Same as the due date for PIT return.</Text>
+         <Text style={styles.cellText}>	Before submission of return of income</Text>
         </View>
       
     
@@ -173,7 +160,8 @@ const ChinaOv = () => {
          <Text style={styles.cellSubText}>PIT estimated payment due dates</Text>
         </View>
         <View >
-         <Text style={styles.cellText}>15th day of the month following the month when the income was received.</Text>
+         <Text style={styles.cellText}>Estimated tax needed to be paid is due in quarterly instalments payable before 15th day 
+         of each quarter of tax year (i.e. 15 June [15%], 15 September [45%], 15 December [75%], 15 March [100%]).</Text>
         </View>
 
 
@@ -192,7 +180,12 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Standard VAT rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>13, 9, or 6 depending on the types of goods and services</Text>
+         <Text style={styles.cellText}>
+         The rate of GST varies from 5% to 28% depending upon the category of goods and services being supplied,
+          the general rate of tax being 18% on majority of goods and services. 
+         {'\n'}Additionally, for certain goods, a compensation cess is levied at different rates as prescribed by
+          the government.
+         </Text>
       </View>
       </View>
 
@@ -208,7 +201,12 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>WHT rates (%) {'\n'}(Dividends/Interest/Royalties)</Text>
         </View>
-         <Text style={styles.cellText}>Resident: NA; {'\n'} Non-resident: 10 / 10 / 10</Text>
+         <Text style={styles.cellText}>
+              Resident: 10 / 10 / 2 to 10 / 2 to 10 for fees for technical services;
+              {'\n'}Non-resident*: 20 / 5 to 40 / 20 / 20 for fees for technical services
+              {'\n'}(For non-residents, the above are to be enhanced by applicable surcharge and health and education cess)
+              {'\n'}*Subject to the rates provided under Double Taxation Avoidance Agreement.
+         </Text>
       </View>
       </View>
 
@@ -223,13 +221,19 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Headline corporate capital gains tax rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>Capital gains are subject to the normal CIT rate.</Text>
+         <Text style={styles.cellText}>
+         10%/20% (applicable surcharge and cess) long-term and 15%/40% (applicable surcharge and cess) short-term (may be exempt under Double Taxation Avoidance Agreement).
+         {'\n'}Please refer to Capital gains in the Income determination section for more details
+         </Text>
       </View>
       <View style={styles.row}>
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Headline individual capital gains tax rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>20</Text>
+         <Text style={styles.cellText}>
+         Long-term capital gain: 10 (on sale of equity shares/ units of equity oriented funds/units of business trust in excess of INR 100,000 and security transaction tax is paid). 10 for non-residents without cost inflation adjustment or 20 for residents/ non-residents with cost inflation adjustment (on sale of any other asset).
+         {'\n'}Short-term capital gain: 15 (if securities transaction tax paid on sale of equity shares/ units of equity oriented funds/ units of business trust) or normal slab rates (on sale of any other asset).
+         </Text>
       </View>
       </View>
 
@@ -248,7 +252,7 @@ const ChinaOv = () => {
         <View style={{ marginRight: 10 }}>
          <Text style={styles.cellSubText}>Headline gift tax rate (%)</Text>
         </View>
-         <Text style={styles.cellText}>NA</Text>
+         <Text style={styles.cellText}>Taxable in the hands of recipient and subject to tax at normal slab rates.</Text>
       </View>
       </View>
 
@@ -286,10 +290,10 @@ const ChinaOv = () => {
         All information in this chart is up to date as of the 'Last reviewed' date on the corresponding territory Overview page. 
         This chart has been prepared for general guidance on matters of interest only, and does not constitute professional advice.
          You should not act upon the information contained in this chart without obtaining specific professional advice.
-         No representation or warranty (express or implied) is given as to the accuracy or completeness of the information contained
-        in this chart, and, to the extent permitted by law, Iwx does not accept or assume any liability, responsibility or duty of
-        care for any consequences of you or anyone else acting, or refraining to act, in reliance on the information contained in 
-        this chart or for any decision based on it.</Text>
+          No representation or warranty (express or implied) is given as to the accuracy or completeness of the information contained
+           in this chart, and, to the extent permitted by law, Iwx does not accept or assume any liability, responsibility or duty of 
+           care for any consequences of you or anyone else acting, or refraining to act, in reliance on the information contained in 
+           this chart or for any decision based on it.</Text>
         </View>
 
 
@@ -434,4 +438,4 @@ const ChinaOv = () => {
           },
         });
         
-        export default ChinaOv;
+        export default IndiaOv;

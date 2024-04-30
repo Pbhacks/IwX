@@ -2,17 +2,25 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
 
 const LpIndia = ({ navigation }) => {
-  const handleNext = () => {
-    navigation.navigate('Main');
-  };
+  const handleOptionClick = (option) => {
+    switch (option) {
+      case 'LawsSelect':
+        navigation.navigate('IndiaLS');
+        break;
+      case 'IndiaRebate':
+        navigation.navigate('IndiaRebate');
+        break;
+      default:
+        break;
+    }}
 
   return (
     <View style={styles.container}>
       <ImageBackground source={require('./04.jpg')} style={styles.background} blurRadius={5}>
         <Text style={styles.title}>India</Text>
-        <TouchableOpacity style={styles.buttonClass} onPress={handleNext}>
+        <TouchableOpacity style={styles.buttonClass}  onPress={() => handleOptionClick('LawsSelect')}>
           <Text style={styles.buttonText}>Tax Laws</Text></TouchableOpacity>
-          <TouchableOpacity style={styles.buttonClass} onPress={handleNext}>
+          <TouchableOpacity style={styles.buttonClass}   onPress={() => handleOptionClick('IndiaRebate')}>
           <Text style={styles.buttonText}>Tax Rebate</Text>
         </TouchableOpacity>
       </ImageBackground>

@@ -30,7 +30,7 @@ const Itxassist: React.FC<{ navigation: any }> = ({ navigation }) => {
         navigation.navigate('LpJapan');
         break;
       case 'South Korea':
-        navigation.navigate('LpSouthk');
+        navigation.navigate('LpSouthK');
         break;
       default:
         break;
