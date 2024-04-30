@@ -153,6 +153,150 @@ textData00={["A review petition has been filed before the Supreme Court against 
 
 
 <OptionBlock
+  title="Corporate residence"
+  description="Corporate residence determines whether a corporation is subject to tax on its worldwide income or only on income derived from within the country. It's an essential concept in international taxation."
+  pointers = {[
+    [
+      "A company is treated as a resident of India in any previous year if:",
+      "- it is an Indian company, or",
+      "- its PoEM in that year is in India (see below)."
+    ]
+  ]}
+  
+  onPress={() => handleReadMore("Corporate residence")}
+  showMore={showMore["Corporate residence"]}
+>
+
+
+<OptionBlock
+  title="Place of effective management (PoEM)"
+  description="A foreign company is considered resident in India if the control and management of its affairs is situated wholly in India. PoEM is a key criterion used to determine the tax residency of foreign companies."
+  textData2={["To bring to tax those companies that are incorporated outside India but controlled from India, the condition of PoEM has been introduced. PoEM is an internationally recognised concept accepted by the Organisation for Economic Co-operation and Development (OECD).",
+             "A foreign company will be regarded as a resident in India if its PoEM is in India in that year. Since ‘residency’ is determined for each year, PoEM is also required to be determined on a year-to-year basis. The concept of PoEM is one of substance over form. The term PoEM has been explained to mean a place where key management and commercial decisions that are necessary for the conduct of the business of an entity as a whole are, in substance, made. To provide clarity and address certain concerns for implementation of determination of residency of a foreign company on the basis of PoEM, the Indian Revenue Department has issued a circular laying down guidelines. The guidelines laid down the concept of determination of PoEM based on bifurcation of companies engaged in active business outside India and other companies. The circulars clarify that the PoEM provisions will not apply to a foreign company having turnover or gross receipts of INR 500 million or less in a tax year."]}
+
+  onPress={() => handleReadMore("Place of effective management (PoEM)")}
+  showMore={showMore["Place of effective management (PoEM)"]}
+/>
+
+
+<OptionBlock
+  title="Permanent establishment (PE)"
+  description="A PE in India is defined as a fixed place of business through which the business of an enterprise is wholly or partly carried on, or through an agent who habitually exercises authority to conclude contracts or regularly delivers goods or secures orders on behalf of a non-resident."
+  onPress={() => handleReadMore("Permanent establishment (PE)")}
+  showMore={showMore["Permanent establishment (PE)"]}
+/>
+
+<OptionBlock
+  title="Business connection"
+  description="The scope of 'business connection' was amended under the Income-tax Act to align with the modified PE Rule as per the Multilateral Instrument (MLI)."
+  textData={["'Business connection' includes business activities carried on by a non-resident through dependent agents. The scope of 'business connection' under the Income-tax Act is similar to the provisions relating to Dependent Agent Permanent Establishment (DAPE) in India’s tax treaties. The amendment provides that business connection shall also include any business activities carried through a person who, acting on behalf of the non-resident, habitually concludes contracts or habitually plays the principal role leading to conclusion of contracts by the non-resident. "]}
+  pointers={[[
+    "- in the name of the non-resident",
+    "- for the transfer of the ownership of, or for the granting of the right to use, property owned by that non-resident or that the non-resident has the right to use, or",
+    "- for the provision of services by that non-resident."
+  ],
+  [ 
+    "Further, as per the provisions of the Income-tax Act, 'significant economic presence' would also constitute a 'business connection' in India.",
+  ],
+  [
+    "The term 'significant economic presence' has been modified, and the applicability of same has been deferred to FY 2021/22."
+  ],
+  [
+    [
+      "'Significant economic presence' means:",
+      "- any transaction in respect of any goods, services, or property carried out by a non-resident with any person in India, including provision of download of data or software in India, if the aggregate of payments arising from such transaction or transactions during the previous year exceeds INR 20 million, or",
+      "- systematic and continuous soliciting of business activities or engaging in interaction with 300,000 users in India."
+    ]
+  ]
+  ]}
+
+textData2={[
+  "However, only so much of income as is attributable to such transactions or activities will be deemed to accrue or arise in India. It is also proposed that the transactions or activities will constitute significant economic presence in India, whether or not the non-resident has a residence or place of business in India or renders services in India.",
+  "The income tax return forms applicable to companies (including foreign companies) have been updated for FY 2021/22 explicitly including disclosure of significant economic presence status of a foreign company in India during FY 2021/22."
+]}
+  onPress={() => handleReadMore("Business connection")}
+  showMore={showMore["Business connection"]}
+/>
+
+
+</OptionBlock>
+
+
+
+<OptionBlock
+  title="Other taxes"
+  description="Last reviewed - 14 December 2023"
+  onPress={() => handleReadMore('Other taxes')}
+  showMore={showMore['Other taxes']}
+>
+
+<OptionBlock
+  title="Goods and Services Tax (GST)"
+  description="GST is an indirect tax, which is a transaction-based taxation regime, that has been in effect in India since 1 July 2017."
+  textData={["Multiple indirect taxes (except customs duty) have been subsumed within GST, and there is one single tax applicable on supply of goods and services. However, there are a few products that continue to be outside the ambit of GST, such as petrol, diesel, aviation turbine fuel (ATF), natural gas, alcohol for human consumption, and crude oil.",             "For smooth GST implementation, the government has formed a GST Council. The Council consists of the State Finance Ministers representing their states. The GST Council provides recommendations to the government on various aspects of GST law, such as rate revisions and amendments in GST rules, etc."]}
+ 
+  onPress={() => handleReadMore('Goods and Services Tax (GST)')}
+  showMore={showMore['Goods and Services Tax (GST)']}
+>
+<OptionBlock
+  title="GST regime"
+  description="GST is an indirect tax, which is a transaction-based taxation regime, that has been in effect in India since 1 July 2017."
+  pointers = {[
+    [
+      "GST is a comprehensive ‘consumption tax’ levied on the supply of all goods and services. Indian GST is a dual model:",
+      "- Central GST (CGST), levied by the Central Government.",
+      "- State GST (SGST)/Union Territory GST (UTGST), levied by the State Governments/Union Territories."
+    ],
+    [
+      "In case of intra-state supply of goods and services, CGST+SGST/UTGST would become applicable, and in case of inter-state supply of goods and services, Integrated GST (IGST) would become applicable. IGST is a sum of CGST and SGST/UTGST. The rate of GST varies from 5% to 28% depending upon the category of goods and services being supplied or procured, the general rate of tax being 18% for the majority of supplies. Additionally, some categories of goods/services, such as vehicles, aerated beverages, etc., notified by the government are subject to compensation cess under GST.",
+    ],
+    [  "The threshold limit for the purpose of obtaining GST registration is INR 2 million aggregate turnover in a financial year (INR 1 million for some special category states, such as the North-Eastern states). For the purpose of the threshold, aggregate turnover will be computed on a PAN-India basis. For some specific categories of supplies and suppliers, the registration requirement is mandatory.",
+   
+    ],
+    [
+      "However, the threshold for obtaining GST registration by a person who is engaged in exclusive intra-state supply of goods is INR 4 million aggregate turnover in a financial year, except in some specified cases.",
+    ],
+    [
+      "Also, for some special category states making supply of goods/services (viz. Arunachal Pradesh, Himachal Pradesh, Meghalaya, Sikkim, and Uttarakhand), the threshold limit has increased from INR 1 million to INR 2 million. For other special category states, the threshold continues to be INR 1 million.",
+    ],
+    [ "Similar to previous VAT laws, there is a concept of composition scheme under GST for small traders. Small traders having turnover of INR 10 million have an option to avail a composition scheme. Under the said scheme, GST at a lower rate (1% of the taxable turnover for manufacturers/traders and 5% in case of restaurants) would apply. The option to avail such a scheme restricts the admissibility to avail input credit."
+  ],
+  [
+    "Further, the option to pay tax under a composition scheme has been extended to services, except for the following:",
+    "- Supply of services not leviable to tax under the CGST Act.",
+    "- Inter-state outward supply of services.",
+    "- Outward supply of services through an e-commerce operator."
+  ]
+  ]}
+  
+  onPress={() => handleReadMore('GST regime')}
+  showMore={showMore['GST regime']}
+/>
+<OptionBlock
+  title="Import of goods and services"
+  description="The import of goods under the GST regime will be subject to IGST and compensation cess (if applicable), along with basic custom duty (BCD) and social welfare surcharge (up to 10% levied on the BCD). BCD and social welfare surcharge paid at the time of imports are not available as credit under GST; consequently, they will always be a cost to the importer."
+  te
+  onPress={() => handleReadMore('Import of goods and services')}
+  showMore={showMore['Import of goods and services']}
+/>
+
+
+
+
+</OptionBlock>
+
+
+</OptionBlock>  
+
+
+
+
+
+
+
+
+
+<OptionBlock
   title="Taxes on corporate income"
   description="A resident company is taxed on its worldwide income. A non-resident company is taxed only on income that is received in India, or that accrues or arises, or is deemed to accrue or arise, in India."
   textData={["The corporate income tax (CIT) rate applicable to an Indian company and a foreign company for the tax year 2022/23 is as follows:"]}
