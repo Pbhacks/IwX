@@ -52,3 +52,8 @@ For any inquiries or assistance, please contact [insert contact email here].
 [![Made with React Native](https://img.shields.io/badge/Made%20with-React%20Native-blue.svg)](https://facebook.github.io/react-native/)
 [![Made with TypeScript](https://img.shields.io/badge/Made%20with-TypeScript-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+## Developer:
+
+RCOP group by President -- Mr. Priyant Banerjee and Utkarsh Mhatre
