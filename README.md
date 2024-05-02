@@ -3,7 +3,7 @@
 ## Overview
 Welcome to IwX (IncomeWellBeingX) – your ultimate companion for income wellbeing! This app is meticulously crafted using React Native and TypeScript (TSX), bringing together cutting-edge technology to empower individuals, particularly in Asia, with financial well-being solutions. Whether you're seeking tax information, rebate assistance, or insightful tips, IwX has got you covered.
 
-![Header Image](https://github.com/Pbhacks/Iwx/2.gif)
+![Header Image](https://github.com/Pbhacks/IwX/blob/master/2.gif)
 
 
 ## Features
