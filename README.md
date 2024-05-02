@@ -9,7 +9,7 @@ Welcome to IwX (IncomeWellBeingX) – your ultimate companion for income wellbei
 ## Features
 
 ### AI Assistant
-Meet your new financial ally! Our AI assistant, aptly named [insert awesome name here], is here to simplify your financial journey. From answering queries to providing personalized recommendations, [insert awesome name here] is your go-to guide for all things related to income and financial well-being.
+Meet your new financial ally! Our AI assistant, aptly named [RcopAI], is here to simplify your financial journey. From answering queries to providing personalized recommendations, [insert awesome name here] is your go-to guide for all things related to income and financial well-being.
 
 ### Comprehensive Income Well-being Solutions
 IwX offers a comprehensive suite of tools and resources to enhance your income well-being:
@@ -33,9 +33,9 @@ To get started with IwX, follow these simple steps:
 
 1. Clone the repository to your local machine.
 git clone https://github.com/pbhacks/IwX
-2. Navigate to the project directory.
-3. Install dependencies.
-4. Run the app.
+2. Navigate to the project directory. (cd Iwx)
+3. Install dependencies. (npm i)
+4. Run the app. (npm start and scan using expo mobile app the qr to run on android)
 
 
 ## Contribution
