@@ -56,4 +56,4 @@ For any inquiries or assistance, please contact [insert contact email here].
 
 ## Developer:
 
-RCOP group by President -- Mr. Priyant Banerjee and Utkarsh Mhatre
+RCOP group by President -- Mr. Priyant Banerjee and Utkarsh Mhatre (VP)
