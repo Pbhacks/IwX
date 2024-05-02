@@ -42,7 +42,7 @@ git clone https://github.com/pbhacks/IwX
 Contributions are welcome and encouraged! If you have ideas for new features, improvements, or bug fixes, feel free to open an issue or submit a pull request. Together, we can make IwX even more impactful.
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [GNU GENERAL PUBLIC LICENSE V2.0](LICENSE).
 
 ## Support
 For any inquiries or assistance, please contact [insert contact email here].
