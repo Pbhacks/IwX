@@ -32,6 +32,7 @@ import SouthKCorp from '../screens/subscreens/Southk/SouthKCorp';
 import SouthKIndiv from '../screens/subscreens/Southk/SouthKIndiv';
 import SouthKRebate from '../screens/subscreens/Southk/SouthKRebate';
 import LpSouthK from '../screens/subscreens/Southk/LpSouthk';
+import { TransitionPresets } from '@react-navigation/stack';
 
 type RootStackParamList = {
   Main: undefined;
@@ -75,8 +76,18 @@ const screenOptions: StackNavigationOptions = {
 
 const MainStackNavigator: React.FC = () => {
   return (
-    <Stack.Navigator initialRouteName="Home" screenOptions={screenOptions}>
-      <Stack.Screen name="Main" component={Main} />
+   <Stack.Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        headerShown: false,
+        gestureEnabled: true,
+        gestureDirection: 'horizontal',
+        ...TransitionPresets.SlideFromRightIOS, // Use SlideFromRightIOS transition preset
+      }}>
+      <Stack.Screen name="Main" component={Main} options={{
+          ...TransitionPresets.ModalSlideFromBottomIOS,
+          presentation: 'modal', // Slide from bottom animation for this screen
+        }} />
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="BA" component={BA} />
       <Stack.Screen name="Itxassist" component={Itxassist} />
