@@ -4,7 +4,7 @@
     "slug": "IwX",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "screens/3.jpg",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",

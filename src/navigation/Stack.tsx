@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { createStackNavigator, StackNavigationOptions } from '@react-navigation/stack';
 import Home from '../screens/Home';
 import BA from '../screens/BA';
