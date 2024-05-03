@@ -80,17 +80,15 @@ const MainStackNavigator: React.FC = () => {
       initialRouteName="Home"
       screenOptions={{
         headerShown: false,
-        gestureEnabled: true,
-        gestureDirection: 'horizontal',
-        ...TransitionPresets.SlideFromRightIOS, // Use SlideFromRightIOS transition preset
+        
       }}>
       <Stack.Screen name="Main" component={Main} options={{
           ...TransitionPresets.ModalSlideFromBottomIOS,
           presentation: 'modal', // Slide from bottom animation for this screen
         }} />
-      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Home" component={Home} options = {{...TransitionPresets.SlideFromRightIOS, presentation: 'modal'}} />
       <Stack.Screen name="BA" component={BA} />
-      <Stack.Screen name="Itxassist" component={Itxassist} />
+      <Stack.Screen name="Itxassist" component={Itxassist} options = {{...TransitionPresets.SlideFromRightIOS, presentation: 'modal'}}/>
       <Stack.Screen name="LpChina" component={LpChina} />
       <Stack.Screen name="ChinaLS" component={ChinaLS} />
       <Stack.Screen name="ChinaOv" component={ChinaOv} />
@@ -115,9 +113,9 @@ const MainStackNavigator: React.FC = () => {
       <Stack.Screen name="SouthKCorp" component={SouthKCorp} />
       <Stack.Screen name="SouthKIndiv" component={SouthKIndiv} />
       <Stack.Screen name="SouthKRebate" component={SouthKRebate} />
-      <Stack.Screen name="Settings" component={Settings} />
-      <Stack.Screen name="ai" component={ai} />
-      <Stack.Screen name="Know" component={Know} />
+      <Stack.Screen name="Settings" component={Settings} options = {{...TransitionPresets.SlideFromRightIOS, presentation: 'modal'}}/>
+      <Stack.Screen name="ai" component={ai} options = {{...TransitionPresets.SlideFromRightIOS, presentation: 'modal'}}/>
+      <Stack.Screen name="Know" component={Know} options = {{...TransitionPresets.SlideFromRightIOS, presentation: 'modal'}}/>
     </Stack.Navigator>
   );
 };
