@@ -4,10 +4,10 @@
     "slug": "IwX",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./3.png",
+    "icon": "./3.jpeg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./3.png",
+      "image": "./3.jpeg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,7 +19,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./3.png",
+        "foregroundImage": "./3.jpeg",
         "backgroundColor": "#ffffff"
       },
       "package": "com.pbhacks.IwX"
