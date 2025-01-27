@@ -18,7 +18,7 @@ const SouthKIndiv = () => {
 
   return (
     <ImageBackground
-      source={{ uri: 'https://source.unsplash.com/random' }}
+      source={{ uri: 'https://cdn.pixabay.com/photo/2017/11/09/18/08/south-korea-2934220_640.png' }}
       style={styles.background}
     >
     <ScrollView 

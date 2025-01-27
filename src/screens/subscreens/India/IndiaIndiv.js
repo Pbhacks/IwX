@@ -18,7 +18,7 @@ const IndiaIndiv = () => {
 
   return (
     <ImageBackground
-      source={{ uri: 'https://source.unsplash.com/random' }}
+      source={{ uri: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png' }}
       style={styles.background}
     >
     <ScrollView 

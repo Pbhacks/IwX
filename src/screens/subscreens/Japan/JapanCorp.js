@@ -18,7 +18,7 @@ const JapanCorp = () => {
 
   return (
     <ImageBackground
-      source={{ uri: 'https://source.unsplash.com/random' }}
+      source={{ uri: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png' }}
       style={styles.background}
     >
     <ScrollView 
