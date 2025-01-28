@@ -92,11 +92,7 @@ const GeminiChat: React.FC = () => {
   );
 
   return (
-<<<<<<< HEAD
     <ImageBackground source={require('./icegif.gif')} style={styles.backgroundImage}>
-=======
-    <ImageBackground source={require('./glow2.gif')} style={styles.backgroundImage}>
->>>>>>> c4157a8bf7c365f8dcd597c7855f0a4e61db730e
       <View style={styles.container}>
         <FlatList
           data={messages}
