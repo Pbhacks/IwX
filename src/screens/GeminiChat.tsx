@@ -18,11 +18,7 @@ const GeminiChat: React.FC = () => {
   const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
   const [showStopIcon, setShowStopIcon] = useState<boolean>(true);
 
-<<<<<<< HEAD
   const API_KEY: string = "AIzaSyCjg5AX_PehGrKTsR97Uxo9YhgfLH28FSU";
-=======
-  const API_KEY: string = "AIzaSyBkU2uAmmyl2Li7zj4pKVDCmMzR8EA2aw4";
->>>>>>> c4157a8bf7c365f8dcd597c7855f0a4e61db730e
 
   useEffect(() => {
     const startChat = async () => {
