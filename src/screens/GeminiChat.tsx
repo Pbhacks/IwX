@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { View, Text, TextInput, FlatList, StyleSheet, TouchableOpacity, ImageBackground } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
-import { LinearGradient } from "expo-linear-gradient";
 import * as GoogleGenerativeAI from "@google/generative-ai";
 import { showMessage } from "react-native-flash-message";
 import * as Speech from "expo-speech";
@@ -17,9 +16,13 @@ const GeminiChat: React.FC = () => {
   const [userInput, setUserInput] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
-  const [showStopIcon, setShowStopIcon] = useState<boolean>(false);
+  const [showStopIcon, setShowStopIcon] = useState<boolean>(true);
 
+<<<<<<< HEAD
   const API_KEY: string = "AIzaSyCjg5AX_PehGrKTsR97Uxo9YhgfLH28FSU";
+=======
+  const API_KEY: string = "AIzaSyBkU2uAmmyl2Li7zj4pKVDCmMzR8EA2aw4";
+>>>>>>> c4157a8bf7c365f8dcd597c7855f0a4e61db730e
 
   useEffect(() => {
     const startChat = async () => {
@@ -89,7 +92,11 @@ const GeminiChat: React.FC = () => {
   );
 
   return (
+<<<<<<< HEAD
     <ImageBackground source={require('./icegif.gif')} style={styles.backgroundImage}>
+=======
+    <ImageBackground source={require('./glow2.gif')} style={styles.backgroundImage}>
+>>>>>>> c4157a8bf7c365f8dcd597c7855f0a4e61db730e
       <View style={styles.container}>
         <FlatList
           data={messages}
